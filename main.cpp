@@ -6,12 +6,14 @@ using namespace std;
 class Customer 
 {
   private:
-    int id = -1; 
-    vector<string> wishList = {"scissors", "soap", "tape", "nails", "eggs", "bread"}; 
-    int wallet = rand() % 99; 
-    int spent = 0; 
+    int id = -1; // a ID we can use to identify a customer
+    vector<string> wishList = {"scissors", "soap", "tape", "nails", "eggs", "bread"}; // wishlist of items
+    int wallet = rand() % 99; //$0 to $99 to spend
+    int spent = 0; // amount this customer has spent from their wallet
+
 
   public:
+  // Constructor
     Customer(int _id) 
     { 
       id = _id;
@@ -21,9 +23,9 @@ class Customer
         wishList.pop_back(); // remove a random number of things from the wishList
     };
 
-    vector<string> getWishList() {return wishList;} 
+    vector<string> getWishList() {return wishList;} // return a vector of strings that represents the wishlist
 
-    int buyOne(string thisItem, int cost) 
+    int buyOne(string thisItem, int cost) // customer purchases one item at the required cost
     {  
       auto it = find (wishList.begin(), wishList.end(), thisItem);
       if (it != wishList.end())
@@ -33,7 +35,7 @@ class Customer
           cout << "Customer id# " << id << " purchased " << * it <<  " for " << cost << " dollars" << endl;
           wallet -= cost; 
           wishList.erase(it);// remove the item from the wishlist
-          return cost; 
+          return cost; // customer pays the cost to the shop
         }
         else
          cout << "Sorry, customer id# " << id << " has run out of money and cannot afford " << thisItem << " at a cost of $" << cost << endl;
@@ -61,7 +63,7 @@ class Customer
       }
     }
 
-    ~Customer()
+    ~Customer() //destructor
     {
         cout << "Goodbye from customer " << id << endl;
     }
@@ -69,8 +71,8 @@ class Customer
 
 int main() 
 {
-  const int totalCustomers = 15; 
-  Customer *customer_pointers[totalCustomers]; 
+  const int totalCustomers = 15; // total customers in line at store
+  Customer *customer_pointers[totalCustomers]; // 15 customer pointers
   int totalSales = 0; 
 
   for (int x = 0; x < totalCustomers; x++)
@@ -90,7 +92,7 @@ int main()
         }
     }
 
-  for(int x = 0; x < totalCustomers; x++)
+  for(int x = 0; x < totalCustomers; x++) // delete customer objects from the heap
    delete customer_pointers[x];  
 
   cout << "Your store earned " << totalSales << " dollars today!" << endl; 
