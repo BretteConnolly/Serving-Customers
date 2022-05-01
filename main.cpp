@@ -70,7 +70,7 @@ class Customer
 int main() 
 {
   const int totalCustomers = 15; 
-  Customer *customer_pointers[totalCustomers]; // DO NOT CHANGE: 15 customer pointers
+  Customer *customer_pointers[totalCustomers]; 
   int totalSales = 0; 
 
   for (int x = 0; x < totalCustomers; x++)
