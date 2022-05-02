@@ -15,3 +15,13 @@ What the program entails:
 
 Further applications:
 -- Can be used as a simple model to simulate how much a business would earn from various numbers of customers, budgets, and prices
+
+
+Output:
+![Serving Customers](https://user-images.githubusercontent.com/79230918/166170073-3d10d302-51b8-43dc-8c1c-99366ac8759e.jpg)
+
+![Serving Customers 2](https://user-images.githubusercontent.com/79230918/166170086-1cd66a3d-ce48-4141-8c8d-f95873b28a33.jpg)
+
+![Serving Customers 3](https://user-images.githubusercontent.com/79230918/166170090-06de7d17-cd45-44cf-8f4f-5d1b2a9d4282.jpg)
+
+![Serving Customers 4](https://user-images.githubusercontent.com/79230918/166170093-0baceead-3878-45e8-99b0-804145ca15df.jpg)
